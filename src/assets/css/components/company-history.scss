@@ -1,0 +1,25 @@
+.company-history {
+    &__title {
+        margin-bottom: 40px;
+    }
+    &__text {
+        color: #8F8F8F;
+    }
+    &__text+&__text {
+        margin-top: 35px;
+    }
+}
+
+
+/* Company-history media queries */
+
+@media screen and (max-width: 767px) {
+    .company-history {
+        &__title {
+            margin-bottom: 30px;
+        }
+        &__text+&__text {
+            margin-top: 20px;
+        }
+    }
+}

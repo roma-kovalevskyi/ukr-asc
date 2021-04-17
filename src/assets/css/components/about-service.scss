@@ -1,0 +1,29 @@
+.about-service {
+    &__info {
+        padding-top: 35px;
+    }
+    &__title {
+        color: $main-blue-color;
+    }
+    &__text {
+        color: #8F8F8F;
+        margin-top: 12px;
+        margin-bottom: 32px;
+    }
+    &__btn {
+        display: inline-block;
+        color: $main-blue-color;
+        padding: 15px 28px;
+    }
+}
+
+
+/* about-service media queries */
+
+@media screen and (max-width: 1199px) {
+    .about-service {
+        &__info {
+            padding-top: 5px;
+        }
+    }
+}

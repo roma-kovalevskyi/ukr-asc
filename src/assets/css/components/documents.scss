@@ -1,0 +1,49 @@
+.documents {
+    background: url(../img/cloud-3.png) left center no-repeat;
+    &__title {
+        margin: calc(35px + 3.95vw) 0 calc(30px + 2.65vw);
+    }
+    &__item {
+        &-title {
+            font-weight: bold;
+            @include adaptiv-font(24, 18);
+            line-height: 1.2;
+            color: $main-blue-color;
+            margin-bottom: 16px;
+        }
+        &-text {
+            color: #8F8F8F;
+        }
+        &-text+&-text {
+            margin-top: 10px;
+        }
+        &-note {
+            padding: 20px;
+            margin-top: 22px;
+            .text {
+                color: #fff;
+            }
+        }
+    }
+}
+
+
+/* documents queries */
+
+@media screen and (max-width: 1199px) {
+    .documents {
+        background: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .documents {
+        .col-md-6 {
+            &:first-child {
+                .documents__item {
+                    margin-bottom: 30px;
+                }
+            }
+        }
+    }
+}

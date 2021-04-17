@@ -1,0 +1,119 @@
+.directions {
+    background: url(../img/cloud-1.png) 0 -130% no-repeat, url(../img/cloud-2.png) right 60% no-repeat, url(../img/cloud-3.png) left -240% no-repeat;
+    &__title {
+        margin: 8vw 0 40px 0;
+    }
+    &__top,
+    &__bottom {
+        display: flex;
+    }
+    &__top {
+        &-left {
+            flex: 0 0 60%;
+        }
+        &-right {
+            flex: 0 0 40%;
+        }
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        &-content {
+            padding: 0 115px 0 30px;
+        }
+        &-content,
+        &-caption {
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+            width: 100%;
+        }
+        &_md {
+            height: 50%;
+        }
+        &-caption {
+            padding: 0 30px;
+            color: #fff;
+            font-weight: bold;
+            @include adaptiv-font(24, 16);
+            line-height: 1.2;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            &_lg {
+                position: static;
+                left: auto;
+                bottom: auto;
+                @include adaptiv-font(36, 20);
+                line-height: 1.18;
+                padding: 0;
+            }
+        }
+        &-link {
+            border: 1px solid #fff;
+            border-radius: 6px;
+            padding: 15px 45px;
+            margin-top: 28px;
+            font-weight: 500;
+            font-size: 0.875rem;
+            line-height: 16px;
+            color: #fff;
+            display: inline-block;
+            transition: $transition-speed;
+            &:hover {
+                color: #1e53d8;
+                background: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+
+/* Directions media queries */
+
+@media screen and (max-width: 991px) {
+    .directions {
+        background: none;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .directions {
+        &__title {
+            margin: 11vw 0 30px 0;
+            br {
+                display: none;
+            }
+        }
+        &__top,
+        &__bottom {
+            flex-wrap: wrap;
+        }
+        &__top {
+            &-left,
+            &-right {
+                flex: 0 0 100%;
+            }
+            &-right {
+                margin-bottom: 20px;
+            }
+        }
+        &__bottom {
+            margin-top: 20px;
+        }
+        &__item {
+            margin-bottom: 20px;
+            &-link {
+                margin-top: 20px;
+            }
+            &-content,
+            &-caption {
+                padding: 0 20px;
+                bottom: 20px;
+            }
+        }
+    }
+}
+
+.directions__item-caption_lg {
+    padding: 0;
+}

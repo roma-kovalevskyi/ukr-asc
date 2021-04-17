@@ -1,0 +1,40 @@
+.packing-preview {
+    padding-top: 85px;
+    &__inner {
+        background: linear-gradient(90deg, #F2F6FF 0%, rgba(255, 255, 255, 0) 100%), url(../img/packing.png) no-repeat right;
+        padding: 30px;
+    }
+    &__info {
+        width: 50%;
+    }
+    &__text {
+        font-weight: bold;
+        @include adaptiv-font(18, 16);
+        line-height: 1.2;
+        margin-bottom: 50px;
+    }
+    &__link {
+        font-weight: 500;
+        @include adaptiv-font(14, 14);
+        line-height: 16px;
+    }
+    &__text,
+    &__link {
+        color: $main-blue-color;
+    }
+}
+
+
+/* packing-preview queries */
+
+@media screen and (max-width: 767px) {
+    .packing-preview {
+        padding-top: 20px;
+        &__inner {
+            background: #F2F6FF;
+        }
+        &__info {
+            width: 100%;
+        }
+    }
+}

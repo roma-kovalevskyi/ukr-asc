@@ -1,0 +1,233 @@
+*,
+ :after,
+ :before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+body {
+    font-family: $main-font;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+p {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.locked {
+    overflow: hidden;
+}
+
+.container {
+    position: relative;
+}
+
+.section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.first-section {
+    &-about {
+        background-image: url(../img/billboard-bg-1.png), linear-gradient(90deg, #3171ff 0, #0048ff 100%);
+    }
+    &-china {
+        background-image: url(../img/billboard-bg-2.png), linear-gradient(90deg, #507EF2 0%, #1858FB 100%);
+        .header {
+            background: linear-gradient(90deg, #4171ec 0, #1e5cf8 100%);
+        }
+    }
+    &-cargos {
+        background-image: url(../img/billboard-bg-3.png), linear-gradient(90deg, #3171ff 0, #0048ff 100%);
+        .header {
+            background: linear-gradient(90deg, #4171ec 0, #1e5cf8 100%);
+        }
+    }
+}
+
+.logo {
+    display: inline-block;
+}
+
+.title {
+    font-weight: bold;
+    @include adaptiv-font(48, 25);
+    line-height: 1.2;
+    &_dark {
+        color: $dark-title-color;
+    }
+    &_light {
+        color: #fff;
+    }
+}
+
+.text {
+    line-height: 1.6;
+    @include adaptiv-font(18, 15);
+}
+
+.bg_blue {
+    background: linear-gradient(90deg, #507EF2 0%, #1858FB 100%);
+}
+
+.bg_clouds,
+.bg_clouds_reverse {
+    position: relative;
+}
+
+.bg_clouds:before,
+.bg_clouds_reverse:after {
+    position: absolute;
+    content: '';
+    left: 0;
+    width: 100%;
+    height: 25vw;
+    background-image: url(../img/billboard-clouds.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.bg_clouds {
+    &:before {
+        bottom: -1px;
+        background-position: center bottom;
+    }
+}
+
+.bg_clouds_reverse {
+    padding-top: calc(45px + 19vw);
+    &:after {
+        top: -1px;
+        background-position: center top;
+        transform: rotate(180deg);
+    }
+}
+
+.photo-bg {
+    &:before {
+        position: absolute;
+        content: '';
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(180deg, rgba(65, 113, 236, 0.25) 0%, #1D5BF9 114.33%);
+    }
+}
+
+
+/*--Partners slider--*/
+
+.partners,
+.logistic-partners {
+    .slick-track {
+        display: flex;
+        align-items: center;
+    }
+    .slick-initialized .slick-slide {
+        display: flex;
+        justify-content: center;
+        outline: none;
+    }
+    .slick-slide img {
+        outline: none;
+    }
+    .slick-list {
+        margin: 0 65px;
+    }
+    .slick-arrow {
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        border: none;
+        outline: 0 !important;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: $transition-speed;
+    }
+    .slick-prev {
+        left: 0;
+    }
+    .slick-next {
+        right: 0;
+    }
+}
+
+
+/*--Popup--*/
+
+.popup {
+    z-index: 9999;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    &__header {
+        min-height: 70px;
+        padding-bottom: 15px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+    }
+    &__content {
+        height: calc(100vh - 70px);
+        display: flex;
+    }
+    &__input {
+        outline: none;
+        border: none;
+        color: #fff;
+        font-weight: 500;
+        @include adaptiv-font(96, 22);
+        border-bottom: 2px solid #fff;
+        background-color: transparent;
+        letter-spacing: 1px;
+    }
+}
+
+.close-popup {
+    background-color: transparent;
+    border: none;
+    outline: none !important;
+}
+
+
+/* Main media queries */
+
+@media screen and (max-width: 767px) {
+    .first-section {
+        &-china {
+            background-position: 15% center;
+        }
+    }
+    .bg_clouds:before,
+    .bg_clouds_reverse:after {
+        height: 45vw;
+    }
+    .bg_clouds_reverse {
+        padding-top: calc(45px + 23vw);
+    }
+}

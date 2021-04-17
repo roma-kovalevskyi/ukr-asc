@@ -1,0 +1,31 @@
+.additional-services {
+    &__title {
+        margin-top: calc(40px + 2.9vw);
+        margin-bottom: 40px;
+    }
+    &__text {
+        color: #8F8F8F;
+    }
+    &__text:not(:first-child) {
+        margin-top: 10px;
+    }
+    &__list {
+        &-item {
+            margin-top: 10px;
+        }
+        &-link {
+            color: $main-blue-color;
+        }
+    }
+}
+
+
+/* additional-services queries */
+
+@media screen and (max-width: 575px) {
+    .additional-services {
+        &__title {
+            margin-bottom: 30px;
+        }
+    }
+}

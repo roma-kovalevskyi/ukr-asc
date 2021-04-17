@@ -1,0 +1,8 @@
+.about-cargos {
+    &__text {
+        color: #8F8F8F;
+    }
+    &__text+&__text {
+        margin-top: 15px;
+    }
+}

@@ -1,0 +1,31 @@
+.partners {
+    padding-bottom: 40px;
+    &__title {
+        margin: 6.5vw 0 4vw;
+    }
+    .slick-arrow {
+        background: #F2F6FF;
+        &:hover {
+            background: darken(#F2F6FF, 1.5%);
+        }
+    }
+}
+
+
+/* partners queries */
+
+@media screen and (max-width: 991px) {
+    .partners {
+        &__title {
+            margin: 8vw 0 6vw;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .partners {
+        &__title {
+            margin: 13vw 0 8vw;
+        }
+    }
+}

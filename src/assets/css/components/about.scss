@@ -1,0 +1,102 @@
+.about {
+    padding-bottom: calc(50px + 2.75vw);
+    &__title {
+        margin-bottom: 0;
+    }
+    &__text {
+        color: $light-grey-color;
+        margin: 30px 0 50px 0;
+    }
+    &-slider {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 100%;
+        &__inner {
+            max-width: 90%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+        }
+        &__navigation {
+            margin-left: 20px;
+        }
+    }
+    .slick-initialized .slick-slide {
+        outline: none;
+        box-shadow: 0 0 20px 60px rgba(0, 0, 0, 0.25);
+    }
+    .slick-vertical .slick-slide {
+        border: none;
+    }
+    .slick-dots {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 15px 0;
+    }
+    .slick-dots li {
+        padding: 0;
+        font-size: 0;
+    }
+    .slick-dots li+li {
+        margin-top: 12px;
+    }
+    .slick-dots li button {
+        border: none;
+        outline: none;
+        width: 12px;
+        height: 12px;
+        background-color: #fff;
+        border-radius: 50%;
+        opacity: 0.25;
+        transition: $transition-speed;
+        &:hover {
+            opacity: 1;
+        }
+    }
+    li.slick-active button {
+        opacity: 1;
+    }
+    .slick-arrow {
+        width: 26px;
+        height: 25px;
+        background-color: transparent;
+        border: none;
+        outline: none;
+    }
+}
+
+
+/* About media queries */
+
+@media screen and (max-width: 991px) {
+    .about {
+        &__text {
+            margin: 25px 0 35px;
+        }
+        &-slider {
+            justify-content: center;
+            flex-direction: column;
+            &__navigation {
+                margin-left: 0;
+            }
+            &__inner {
+                max-width: 100%;
+            }
+        }
+        .slick-dots {
+            flex-direction: row;
+            li+li {
+                margin-top: 0;
+                margin-left: 10px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .about {
+        &__slider {
+            margin-top: 30px;
+        }
+    }
+}

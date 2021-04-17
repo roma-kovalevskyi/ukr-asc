@@ -1,0 +1,42 @@
+.requisites {
+    padding-bottom: 40px;
+    &__title {
+        margin: 70px 0 40px 0;
+    }
+    &__text {
+        line-height: 1.6;
+        @include adaptiv-font(18, 15);
+        color: #8F8F8F;
+    }
+    &-contacts {
+        &__phone,
+        &__fax,
+        &__email {
+            display: flex;
+            align-items: center;
+            &-icon {
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+
+/* Requisites media queries */
+
+@media screen and (max-width: 991px) {
+    .requisites-contacts {
+        &__phone {
+            margin-top: 20px;
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .requisites {
+        padding-bottom: 20px;
+        &__title {
+            margin: 35px 0 30px;
+        }
+    }
+}

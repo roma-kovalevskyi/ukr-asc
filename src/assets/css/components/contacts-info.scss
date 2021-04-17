@@ -1,0 +1,35 @@
+.contacts-info {
+    padding: calc(20px + 3vw) 0 20px 0;
+    &__text {
+        &-box {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px 15px;
+            &:hover {
+                text-decoration: none;
+            }
+        }
+        font-weight: bold;
+        @include adaptiv-font(18, 15);
+        line-height: 1.5;
+        color: #fff;
+        margin-left: 12px;
+    }
+}
+
+
+/* contacts-info media queries */
+
+@media screen and (max-width: 767px) {
+    .contacts-info {
+        &__text {
+            &-box {
+                padding: 20px 15px;
+            }
+        }
+        &__phone {
+            display: block;
+        }
+    }
+}

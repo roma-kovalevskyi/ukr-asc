@@ -1,0 +1,57 @@
+.quality-proof {
+    &__inner {
+        display: flex;
+        align-items: flex-start;
+        flex-wrap: wrap;
+    }
+    &__title {
+        margin: 3.65vw 0;
+    }
+    &__item {
+        flex: 0 0 calc(100% / 5);
+    }
+    &__img-box {
+        min-height: 120px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    &__caption {
+        color: $main-blue-color;
+        text-align: center;
+        font-weight: bold;
+        font-size: 0.875rem;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin-top: 15px;
+        max-width: 130px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+
+/* Quality-proof media queries */
+
+@media screen and (max-width: 991px) {
+    .quality-proof {
+        &__title {
+            margin: 3vw 0 5vw 0;
+        }
+        &__item {
+            margin-bottom: 15px;
+            flex: 0 0 calc(100% / 3);
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .quality-proof {
+        &__title {
+            margin: 20px 0 35px 0;
+        }
+        &__item {
+            flex: 0 0 calc(100% / 2);
+        }
+    }
+}

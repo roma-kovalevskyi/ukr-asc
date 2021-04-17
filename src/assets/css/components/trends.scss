@@ -1,0 +1,53 @@
+.trends {
+    background: url(../img/cloud-1.png) 0 90% no-repeat, url(../img/cloud-2.png) right 90% no-repeat;
+    &__title {
+        margin: 75px 0 60px 0;
+    }
+    &__item {
+        position: relative;
+        display: flex;
+        margin-bottom: 30px;
+        &-caption {
+            position: absolute;
+            left: 0;
+            bottom: 30px;
+            width: 100%;
+            padding: 0 30px;
+            color: #fff;
+            font-weight: bold;
+            @include adaptiv-font(24, 16);
+            line-height: 1.2;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+    }
+}
+
+
+/* Trends media queries */
+
+@media screen and (max-width: 991px) {
+    .trends {
+        background: none;
+        &__item {
+            margin-bottom: 20px;
+            &-caption {
+                padding: 0 20px;
+                bottom: 20px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .trends {
+        &__title {
+            margin: 55px 0 30px;
+            br {
+                display: none;
+            }
+        }
+        &__item {
+            margin-bottom: 20px;
+        }
+    }
+}
